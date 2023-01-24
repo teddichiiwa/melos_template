@@ -20,7 +20,7 @@ scripts:
     description: Clean and Bootstrap all packages.
 
   build_runner:build:
-    run: melos exec --order-dependents \ "flutter pub run build_runner build --delete-conflicting-outputs"
+    run: melos exec --order-dependents --depends-on="build_runner" \ "flutter pub run build_runner build --delete-conflicting-outputs"
     description: Run build runner build with order dependents
 
   test:flutter:
